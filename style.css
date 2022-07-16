@@ -6,9 +6,9 @@
 
 body {
     display: grid;
-    height: 95vh;
+    height: 130vh;
     grid-template-columns: 1fr 900px 1fr;
-    grid-template-rows: 1.3fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr;
 }
 
 nav {
@@ -38,4 +38,9 @@ header {
 
 #card-container {
     grid-area: 2 / 2 / 4 / 3;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    gap: 30px;
 }
