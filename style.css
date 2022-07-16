@@ -2,6 +2,8 @@
     border: 2px solid red;
     padding: 0;
     margin: 0;
+    --my-blue-color: #0fa5d3;
+    --my-orange-color: #fff3b0;
 }
 
 body {
@@ -24,6 +26,9 @@ nav a {
 
 header {
     grid-column: 2 / 4;
+
+    display: grid;
+    grid-template-columns: 64% 36%;
 }
 
 #announcements {
@@ -39,8 +44,24 @@ header {
 #card-container {
     grid-area: 2 / 2 / 4 / 3;
 
-
     display: grid;
     grid-template-columns: repeat(auto-fill, 380px);
     gap: 30px;
 }
+
+#right {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+button {
+    width: 130px;
+    padding: 10px;
+    border-radius: 6%;
+    color: white;
+    background-color: var(--my-blue-color);
+}
+
