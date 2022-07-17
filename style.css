@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
-    border: 2px solid red;
     padding: 0;
     margin: 0;
     --my-blue-color: #0fa5d3;
@@ -11,6 +12,7 @@ body {
     height: 130vh;
     grid-template-columns: 1fr 900px 1fr;
     grid-template-rows: 1fr 2fr 2fr;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav {
@@ -18,10 +20,23 @@ nav {
 
     display: flex;
     flex-direction: column;
+    border: 0;
+    background-color: var(--my-blue-color);
+}
+
+nav h1 {
+    height: 40px;
+    border: 0;
+    padding: 20px;
+    color: white;
 }
 
 nav a {
-    height: 50px;
+    padding:20px 0px 0px 20px;
+    height: 30px;
+    border: 0;
+    text-decoration: none;
+    color: white;
 }
 
 header {
@@ -31,14 +46,71 @@ header {
     grid-template-columns: 64% 36%;
 }
 
+#search-bar {
+    margin: 20px 0px 40px 20px;
+}
+
+input {
+    width: 70%;
+    border: 2px solid black;
+    padding: 6px 10px;
+}
+
 #announcements {
     grid-area: 2 / 3 / 2 / 3;
 }
+
+#announcements h1 {
+    font-size: 25px;
+    padding-left: 40px;
+}
+
+#announcements-container {
+    border-radius: 5%;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#announcements-container h2 {
+    color: grey;
+    font-size: 20px;
+}
+
+.policy {
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
 
 #trending {
     grid-area: 3 / 3 / 3 / 3;
     display: flex;
     flex-direction: column;
+}
+
+#trending h1 {
+    font-size: 25px;
+    padding-left: 40px;
+}
+
+#trending-container {
+    border-radius: 5%;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#trending-container h2 {
+    margin-bottom: 10px;
+    color: grey;
+    font-size: 20px;
+}
+
+
+.users {
+    padding: 4px;
+    margin-bottom: 10px;
 }
 
 #card-container {
