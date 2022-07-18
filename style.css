@@ -10,12 +10,18 @@
 body {
     display: grid;
     height: 130vh;
-    grid-template-columns: 1fr 900px 1fr;
+    grid-template-columns: 1fr 800px 1fr;
     grid-template-rows: 1fr 2fr 2fr;
     font-family: 'Roboto', sans-serif;
     background-color: #f4f0ec;
 }
 
+img {
+    display: inline;
+    height: 30px;
+    width: auto;
+
+}
 nav {
     grid-row: 1 / 4;
 
@@ -49,22 +55,29 @@ header {
 }
 
 #search-bar {
-    margin: 20px 0px 40px 20px;
+    margin: 20px 0px 20px 20px;
 }
 
 input {
-    width: 70%;
-    border: 2px solid black;
-    padding: 6px 10px;
+    background-color: rgb(241, 233, 233);
+    border: 0;
+    padding: 5px;
+    border-radius:5px;
+    width: 80%;
+    height: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 #announcements {
     grid-area: 2 / 3 / 2 / 3;
+    padding: 20px 20px 0px 0px;
 }
 
 #announcements h1 {
     font-size: 25px;
     padding-left: 40px;
+    margin-bottom: 10px;
 }
 
 #announcements-container {
@@ -89,25 +102,38 @@ input {
     grid-area: 3 / 3 / 3 / 3;
     display: flex;
     flex-direction: column;
+
+    padding: 20px 20px 0px 0px;
 }
 
 #trending h1 {
     font-size: 25px;
     padding-left: 40px;
+    margin-bottom: 10px;
 }
 
 #trending-container {
+    margin-bottom: 30px;
     background-color: white;
     border-radius: 5%;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #trending-container h2 {
+    position: relative;
     margin-bottom: 10px;
     color: grey;
     font-size: 20px;
+
+    padding-left: 40px;
+}
+
+#trending-container h2 img {
+    position: absolute;
+    left: 3px;
+    height: 30px;
 }
 
 .users {
@@ -118,12 +144,15 @@ input {
 #card-container {
     grid-area: 2 / 2 / 4 / 3;
 
+    padding: 30px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, 380px);
+    grid-template-columns: repeat(auto-fill, 350px);
     gap: 30px;
 }
 
 .card {
+    position: relative;
     background-color: white;
     border-left: 6px solid var(--my-orange-color);
     border-radius: 5px;
@@ -137,19 +166,36 @@ input {
     margin-bottom: 10px;
 }
 
+.card img {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
 #right {
     display: flex;
     justify-content: row;
-    align-items: center;
-    gap: 10px;
+    margin-top: 20px;
+    align-items: flex-start;
+    gap: 20px;
 
 }
 
 button {
     width: 130px;
     padding: 10px;
-    border-radius: 6%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0;
     color: white;
     background-color: var(--my-blue-color);
 }
 
+#introduction {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#introduction h1 img {
+    height: 40px;
+}
